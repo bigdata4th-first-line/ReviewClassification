@@ -260,7 +260,7 @@ Word Cloud Python package (version 1.9.2)
 Matplotlib Python package (version 3.7.0)
 <br>
 
-## Paper
+## Reference
 정한호 "교원 원격연수에서 교수서비스, 비교수서비스, 지각된 품질, 만족도, 충성도 간의
 구조적 관계 분석" 한국교육학연구 23.3 pp.87-115 (2017) : 87.
 <br>
