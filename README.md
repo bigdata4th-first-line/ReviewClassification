@@ -50,12 +50,15 @@
 <br>
 
 ## Method
-연수원 후기 분석 프로젝트의 모든 과정을 워크플로우로 시각화하였다.
-<p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%801.png" width="800"/>
- <br> [그림 1] 후기 분석 전체 워크플로우
+| ![workflow.png](이미지/이미지1.png) |
+|:--:|
+| <b> [Figure1] Project Workflow </b> |
+| 연수원 후기 분석 프로젝트의 모든 과정을 워크플로우로 시각화하였다. |
+
+
 </p>
-i) 데이터 수집 및 전처리
+<b>i) 데이터 수집 및 전처리</b>
+<br>
 - Python의 Selenium 패키지를 이용해 데이터를 수집한다. 후기는 2018년 1월 1일
 후기부터 수집한다. T셀파 연수원 홈페이지와 경쟁사 연수원 홈페이지에서 각각
 T셀파 2747개, 경쟁사 5112개의 연수 후기를 수집했다.
@@ -64,22 +67,24 @@ T셀파 2747개, 경쟁사 5112개의 연수 후기를 수집했다.
 - 연수후기는 후기의 제목과 내용을 합쳐 하나의 열에 넣은 뒤 감정 분석을 위해 512자를
 넘는 후기는 삭제 처리한다. 삭제 처리 후 T셀파 2595개(152개 삭제), 경쟁사
 4891개(221개 삭제)의 데이터가 남았다.
-<p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%802.png" width="800"/>
-  <br> [표 1] 전체 수집 데이터와 사용 데이터 수
-</p>
+
+| ![workflow.png](이미지/이미지2.png) |
+|:--:|
+| <b> [Figure2] 전체 수집 데이터와 사용 데이터 수 </b> |
+| 후기의 제목과 내용을 합쳐 512자를 넘는 후기는 삭제 처리 |
 <br>
+<b>ii) 모델링</b>
 <br>
-ii) 모델링
 후기를 작성한 사람들이 선택한 별점과 Pre-Trained 모델이 분류하는 비율은 어떻게
 다를지 실험했다. 별점은 3점을 중립 점수로 설정하고 별점 4,5개는 긍정, 별점 1,2개는
 부정으로 나누었다. 위 그림을 보면 수집한 데이터에서 98.2%의 높은 비율로 긍정의
 평가가 많다는 것을 알 수 있다.
 Huggingface를 참고하여 제작자와 모델명을 적음으로써(ex. klue/bert-base) 비교적
-간단히 Pre-Trained 모델을 불러왔다. 그 다음 AutoTokenizer와AutoModelForSequenceClassification, TextClassificationPipeline으로 수집한 데이터들의 감성 분류를 진행했다.
+간단히 Pre-Trained 모델을 불러왔다. 그 다음 AutoTokenizer와 AutoModelForSequenceClassification, TextClassificationPipeline으로 수집한 데이터들의 감성 분류를 진행했다.
 <br>
 <br>
-iii) 감정 분석
+<b>iii) 감정 분석</b>
+<br>
 같은 평점이라도 서로 다른 반응을 보이는 후기가 존재하여, 이를 감정 분석 텍스트
 마이닝을 사용해 긍정적인 반응과 부정적인 반응으로 분류한다.
 온라인 뉴스의 댓글 17.3GB, 약 1.8억개의 문장으로 학습된 KcELECTRA-base 모델을
@@ -90,12 +95,14 @@ iii) 감정 분석
 할당하고 점수를 종합하여 최종 감정분석을 진행한다.
 <br>
 <br>
-iv) 시각화
+<b>iv) 시각화</b>
+<br>
 감정 분석을 진행한 T셀파와 경쟁사 연수 후기 데이터를 이용해 날짜에 따른 부정
 리뷰 비율과 평점 비율을 꺾은선 그래프로 시각화했다.
 <br>
 <br>
-v) 워드클라우드 분석
+<b>v) 워드클라우드 분석</b>
+<br>
 T 셀파와 경쟁사 연수 후기 데이터에서 완전한 한글을 제외하고는 제거 후, 긍정
 후기와 부정 후기를 각각 단어로 구분했다. 긍정 후기와 부정 후기에 공통적으로 들어가는
 단어들을 불용어로 지정 후에, 남아있는 단어들을 빈도수로 정렬하여 워드클라우드로
@@ -103,10 +110,11 @@ T 셀파와 경쟁사 연수 후기 데이터에서 완전한 한글을 제외�
 <br>
 
 ## Result
-<p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%803.png" width="800"/>
-  <br> [그림2] (a) 경쟁사의 별점을 기준으로 나눈 Positive, Neutral, Negative (b) Tsherpa의 별점을 기준으로 나눈 Positive, Neutral, Negative
-</p>
+| ![workflow.png](이미지/이미지3.png) |
+|:--:|
+| <b> [Figure3] 별점 기준 감정분석 </b> |
+| (a) 경쟁사의 별점을 기준으로 나눈 Positive, Neutral, Negative <br>(b) Tsherpa의 별점을 기준으로 나눈 Positive, Neutral, Negative |
+
 <br>
 총 5가지 모델을 실험했는데, 그 중 가장 별점과 유사한 비율을 보여준 모델이 있었다.
 첫 번째 모델은 ‘jaehyeong/koelectra-base-v3-generalized-sentiment-analysis’이다.
@@ -116,17 +124,24 @@ KoELECTRA에 추가로 네이버 쇼핑 말뭉치와 네이버 영화 리뷰를 
 크롤링한 텍스트를 단순 KoELECTRA로 분류했을 때는 전부 중립으로 분류했으나, 리뷰
 데이터를 학습한 모델이 긍정 부정을 더 잘 분류했다고 볼 수 있다.
 
-<p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%804.png" width="800"/>
-  <br> [그림3] (a) jaehyeong 모델을 이용한 감정 분석 분류 표 (b) 경쟁사 Positive, Neutral, Negative 감정
-분석 비율 (c) T셀파 Positive, Neutral, Negative 감정 분석 비율
-</p>
+| ![workflow.png](이미지/이미지4.png) |
+|:--:|
+| <b> [Figure2] 전체 수집 데이터와 사용 데이터 수 </b> |
+| (a) jaehyeong 모델을 이용한 감정 분석 분류 표 <br>(b) 경쟁사 Positive, Neutral, Negative 감정분석 비율 <br>(c) T셀파 Positive, Neutral, Negative 감정 분석 비율 |
+
+
 <br>
 두 번째 모델은 ‘matthewburke/korean_sentiment’ 이다. 이 모델은 KcELECTRA 모델에
 네이버 영화 리뷰를 fine-tuning 한 모델이다. KcELECTRA 모델은 첫 번째 모델의 주가
 된 KoELECTRA보다 훨씬 많은 데이터를 학습한 모델에 fine-tuning한 모델이다.
+
+| ![workflow.png](이미지/이미지5.png) |
+|:--:|
+| <b> [Figure2] 전체 수집 데이터와 사용 데이터 수 </b> |
+| (a) jaehyeong 모델을 이용한 감정 분석 분류 표 <br>(b) 경쟁사 Positive, Neutral, Negative 감정분석 비율 <br>(c) T셀파 Positive, Neutral, Negative 감정 분석 비율 |
+
 <p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%805.png" width="800"/>
+  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%805.png" width="600"/>
   <br> [그림4](a) matthewburke/korean_sentiment 모델을 이용한 감정 분석 분류 표 (b) 경쟁사 Positive,
 Neutral, Negative 감정 분석 비율 (c) T셀파 Positive, Neutral, Negative 감정 분석 비율
 
@@ -137,16 +152,16 @@ Neutral, Negative 감정 분석 비율 (c) T셀파 Positive, Neutral, Negative �
 주목해야할 부분으로 긍정과 부정이 나뉜 3점 후기와, 4,5점 임에도 부정적으로 분류된
 후기들이다.
 <p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%806.png" width="800"/>
+  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%806.png" width="600"/>
   <br> [표 2] 평점과 감정 분석을 통해 분류한 T셀파와 경쟁사의 연수 후기
 </p>
 <br>
 <p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%807.png" width="800"/>
+  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%807.png" width="600"/>
   <br> [그림 5] 평점 3점 연수후기
 </p>
 <p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%808.png" width="800"/>
+  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%808.png" width="600"/>
   <br> [표 3] 별점 4점과 5점 중 부정적 연수 후기
 </p>
 평점이 4점 혹은 5점이더라도 부정적인 평가내용들이 종종 있다. 텍스트의 감정 분석을
@@ -156,7 +171,7 @@ Neutral, Negative 감정 분석 비율 (c) T셀파 Positive, Neutral, Negative �
 
 i) 감정 분석 부정 리뷰 비율 그래프
 <p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%809.png" width="800"/>
+  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%809.png" width="600"/>
   <br> [그림 6] 감정 분석에 의한 T셀파와 경쟁사 부정 리뷰 비율 그래프
 </p>
 T셀파는 우하향 그래프를 보인다. 18년 2/4분기에는 20%에 달하는 부정 리뷰 비율을
