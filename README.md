@@ -217,19 +217,14 @@ iv) T셀파 감정 분석 워드클라우드
 | <b> [Figure12] T셀파의 연수후기 감정 분석 워드 클라우드 긍정(좌)과 부정(우) </b> |
 
 <br>
+<br>
+v) 경쟁사 감정 분석 워드클라우드
+
 | ![workflow.png](이미지/이미지13.png) |
 |:--:|
 | <b> [Figure13] 경쟁사의 연수후기 감정 분석 워드 클라우드 긍정(좌)과 부정(우) </b> |
 <br>
 <br>
-v) 경쟁사 감정 분석 워드클라우드
-<p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%8013.png" width="800"/>
-  <br> [그림 10] 경쟁사 연수후기 감정 분석 워드 클라우드 긍정(좌)과 부정(우
-</p>
-
-<br>
-
 ## Discussion
 i) T셀파는 2018년 2분기에 각각 20%, 30%에 달하던 부정적인 리뷰와 낮은 별점 비율이
 점차 낮아져 5% 이내에서 오르내리고 있다(그림 6, 그림 7). 그림 8의 연수 후기 개수
