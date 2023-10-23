@@ -141,13 +141,6 @@ KoELECTRA에 추가로 네이버 쇼핑 말뭉치와 네이버 영화 리뷰를 
 | <b> [Figure5]  matthewburke/korean_sentiment 모델을 이용한 감정 분석 </b> |
 | (a)  matthewburke/korean_sentiment 모델을 이용한 감정 분석 분류 표  <br>(b) 경쟁사 Positive, Neutral, Negative 감정분석 비율 <br>(c) T셀파 Positive, Neutral, Negative 감정 분석 비율 |
 
-<p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%805.png" width="600"/>
-  <br> [그림4](a) matthewburke/korean_sentiment 모델을 이용한 감정 분석 분류 표 <br>(b) 경쟁사 Positive,
-Neutral, Negative 감정 분석 비율 <br>(c) T셀파 Positive, Neutral, Negative 감정 분석 비율
-
-</p>
-
 <br>
 평점과 감정 분석을 통해 분류된 후기의 수를 표로 정리했다. 
 
