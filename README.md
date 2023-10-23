@@ -109,7 +109,8 @@ T 셀파와 경쟁사 연수 후기 데이터에서 완전한 한글을 제외�
 시각화했다.
 <br>
 
-## Result
+## Result : 수치형 데이터
+
 | ![workflow.png](이미지/이미지3.png) |
 |:--:|
 | <b> [Figure3] 별점 기준 감정분석 </b> |
@@ -126,7 +127,7 @@ KoELECTRA에 추가로 네이버 쇼핑 말뭉치와 네이버 영화 리뷰를 
 
 | ![workflow.png](이미지/이미지4.png) |
 |:--:|
-| <b> [Figure2] 전체 수집 데이터와 사용 데이터 수 </b> |
+| <b> [Figure4] jaehyeong 모델을 이용한 감정 분석 </b> |
 | (a) jaehyeong 모델을 이용한 감정 분석 분류 표 <br>(b) 경쟁사 Positive, Neutral, Negative 감정분석 비율 <br>(c) T셀파 Positive, Neutral, Negative 감정 분석 비율 |
 
 
@@ -137,8 +138,8 @@ KoELECTRA에 추가로 네이버 쇼핑 말뭉치와 네이버 영화 리뷰를 
 
 | ![workflow.png](이미지/이미지5.png) |
 |:--:|
-| <b> [Figure2] 전체 수집 데이터와 사용 데이터 수 </b> |
-| (a) jaehyeong 모델을 이용한 감정 분석 분류 표 <br>(b) 경쟁사 Positive, Neutral, Negative 감정분석 비율 <br>(c) T셀파 Positive, Neutral, Negative 감정 분석 비율 |
+| <b> [Figure5]  matthewburke/korean_sentiment 모델을 이용한 감정 분석 </b> |
+| (a)  matthewburke/korean_sentiment 모델을 이용한 감정 분석 분류 표  <br>(b) 경쟁사 Positive, Neutral, Negative 감정분석 비율 <br>(c) T셀파 Positive, Neutral, Negative 감정 분석 비율 |
 
 <p align="center">
   <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%805.png" width="600"/>
@@ -148,59 +149,77 @@ Neutral, Negative 감정 분석 비율 (c) T셀파 Positive, Neutral, Negative �
 </p>
 
 <br>
-평점과 감정 분석을 통해 분류된 후기의 수를 표로 정리했다. 색이 들어간 부분은
+평점과 감정 분석을 통해 분류된 후기의 수를 표로 정리했다. 
+
+| ![workflow.png](이미지/이미지6.png) |
+|:--:|
+| <b> [Figure6]  평점과 감정 분석을 통해 분류한 T셀파와 경쟁사의 연수 후기 </b> |
+| 색이 들어간 부분은
 주목해야할 부분으로 긍정과 부정이 나뉜 3점 후기와, 4,5점 임에도 부정적으로 분류된
 후기들이다.
-<p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%806.png" width="600"/>
-  <br> [표 2] 평점과 감정 분석을 통해 분류한 T셀파와 경쟁사의 연수 후기
-</p>
+ |
 <br>
-<p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%807.png" width="600"/>
-  <br> [그림 5] 평점 3점 연수후기
-</p>
-<p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%808.png" width="600"/>
-  <br> [표 3] 별점 4점과 5점 중 부정적 연수 후기
-</p>
-평점이 4점 혹은 5점이더라도 부정적인 평가내용들이 종종 있다. 텍스트의 감정 분석을
+
+| ![workflow.png](이미지/이미지7.png) |
+|:--:|
+| <b> [Figure7]  평점 3점 연수후기 </b> |
+| 평점이 3점인 후기들은 감정분석결과 긍정과 부정 반으로 나뉘었다. |
+<br>
+평점으로만 파악하기 힘든 후기를 감정 분석을 통해 나눌 수 있다.
+<br>
+
+| ![workflow.png](이미지/이미지8.png) |
+|:--:|
+| <b> [Figure8]  별점 4점과 5점 중 부정적 연수 후기 </b> |
+| 평점이 4점 혹은 5점이더라도 부정적인 평가내용들이 있다. |
+<br>
+ 텍스트의 감정 분석을
 통해 별점은 높지만 불만을 표하는 후기들을 추려낼 수 있었다. 연수원의 개선점을
 파악하는데 도움이 될 것이다.
 <br>
 
 i) 감정 분석 부정 리뷰 비율 그래프
-<p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%809.png" width="600"/>
-  <br> [그림 6] 감정 분석에 의한 T셀파와 경쟁사 부정 리뷰 비율 그래프
-</p>
-T셀파는 우하향 그래프를 보인다. 18년 2/4분기에는 20%에 달하는 부정 리뷰 비율을
+| ![workflow.png](이미지/이미지9.png) |
+|:--:|
+| <b> [Figure8] 감정 분석에 의한 T셀파와 경쟁사의 부정리뷰 비율 그래프 </b> |
+| T셀파는 우하향 그래프를 보인다. 18년 2/4분기에는 20%에 달하는 부정 리뷰 비율을
 가지다가 20년 3/4분기부터 5% 이내의 범위에서 오르내리고 있다. 경쟁사
-지속적으로 0~5% 사이를 유지하고 있다.
+지속적으로 0~5% 사이를 유지하고 있다.|
 <br>
+
 <br>
 ii) 평점(1점~3점) 비율 그래프
-<p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%8010.png" width="800"/>
-  <br> [그림 7] T셀파와 경쟁사 평점(1점~3점) 비율 그래프
-</p>
-부정 리뷰 비율과 비슷한 추세를 보인다. 18년 2/4분기에는 30%에 달하던 T셀파의 3점
+
+| ![workflow.png](이미지/이미지10.png) |
+|:--:|
+| <b> [Figure10] T셀파와 경쟁사의 평점(1~3점) 비율 그래프 </b> |
+| 부정 리뷰 비율과 비슷한 추세를 보인다. 18년 2/4분기에는 30%에 달하던 T셀파의 3점
 이하 평점 비율이 21년부터는 5% 이내에서 오르내리고 있다. 경쟁사 지속적으로
-0~5% 사이를 유지하고 있다.
+0~5% 사이를 유지하고 있다.|
+
 <br>
 <br>
 iii) 리뷰 개수 그래프
-<p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%8011.png" width="800"/>
-  <br> [그림 8] T셀파와 경쟁사의 분기별 리뷰 개수 그래프
-</p>
+
+| ![workflow.png](이미지/이미지11.png) |
+|:--:|
+| <b> [Figure11] T셀파와 경쟁사의 분기별 리뷰 개수 그래프 </b> |
+| T셀파는 서비스 시작 이후 분기 당 100건 이하의 낮은 리뷰 개수를 기록하다 21년
+2분기부터 확연하게 상승했다. 아이스크림은 분기 당 1000개에서 3000여개의 후기를
+기록하고 있다. 양사 공통으로 4분기에 후기 개수가 많은 것을 확인할 수 있다.|
+
 <br>
 <br>
 iv) T셀파 감정 분석 워드클라우드
-<p align="center">
-  <img src="https://github.com/bigdata4th-first-line/ReviewClassification/blob/main/%EC%9D%B4%EB%AF%B8%EC%A7%80/%EC%9D%B4%EB%AF%B8%EC%A7%8012.png" width="800"/>
-  <br> [그림 9] T셀파 연수후기 감정 분석 워드 클라우드 긍정(좌)과 부정(우)
-</p>
+
+| ![workflow.png](이미지/이미지12.png) |
+|:--:|
+| <b> [Figure12] T셀파의 연수후기 감정 분석 워드 클라우드 긍정(좌)과 부정(우) </b> |
+
+<br>
+| ![workflow.png](이미지/이미지13.png) |
+|:--:|
+| <b> [Figure13] 경쟁사의 연수후기 감정 분석 워드 클라우드 긍정(좌)과 부정(우) </b> |
 <br>
 <br>
 v) 경쟁사 감정 분석 워드클라우드
