@@ -155,7 +155,7 @@ Neutral, Negative 감정 분석 비율 <br>(c) T셀파 Positive, Neutral, Negati
 |:--:|
 | <b> [Figure6]  평점과 감정 분석을 통해 분류한 T셀파와 경쟁사의 연수 후기 </b> |
 | 색이 들어간 부분은 주목해야할 부분으로 긍정과 부정이 나뉜 3점 후기와, 4,5점 임에도 부정적으로 분류된 후기들이다.
- |
+
 <br>
 
 | ![workflow.png](이미지/이미지7.png) |
